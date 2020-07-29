@@ -1,0 +1,33 @@
+using System;
+
+namespace ftoc
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string temperatureScale;
+            double convertedTemp;
+
+            Console.Write("Enter temperature : ");
+            double temperature = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter C for 'Celsius to Fahrenheit' or F for 'Fahrenheit to Celsius': ");
+            temperatureScale = Convert.ToString(Console.ReadLine());
+
+            if (temperatureScale.Equals("F") || temperatureScale.Equals("f"))
+            {
+                convertedTemp = ((temperature - 32) * 5) / 9;
+                Console.WriteLine(temperature + "°" + temperatureScale + " is equal to " + +convertedTemp + "°C");
+            }
+
+
+            if (temperatureScale.Equals("C") || temperatureScale.Equals("c"))
+            {
+                convertedTemp = ((temperature * 9) / 5 + 32);
+                Console.WriteLine(temperature + "°" + temperatureScale + " is equal to " + +convertedTemp + "°F");
+            }
+
+        }
+    }
+}
